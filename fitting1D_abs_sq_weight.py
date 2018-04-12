@@ -24,7 +24,6 @@ class Fitting:
             self.D = np.zeros((self.fitting_order + 1))
             self.b = np.zeros((self.fitting_order + 1))
             self.omega_n = []
-            print(np.amax(self.fr))
 
     def forsythe_nom(self):
         poly_real_nom = np.zeros((self.n, self.m))
@@ -157,9 +156,3 @@ class Fitting:
             cls.fitting_order = int(order) - 1
         else:
             cls.fitting_order = order
-
-
-#measurement1 = Fitting('theoretical_frf.mat')
-measurement2 = Fitting('ford_meas.mat')
-#measurement1.run_rpf()
-measurement2.run_rpf()
